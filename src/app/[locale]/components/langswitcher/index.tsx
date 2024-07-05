@@ -24,7 +24,7 @@ export const LangSwitcher = () => {
     };
 
     return (
-        <div className="relative mt-2">
+        <div className="relative">
             <button
                 type="button"
                 className="cursor-pointer relative w-full cursor-default rounded-md bg-white py-1.5 pl-3 pr-10 text-left text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 sm:text-sm sm:leading-6 flex flex-row gap-1"
@@ -44,11 +44,12 @@ export const LangSwitcher = () => {
                             <li
                                 key={i}
                                 className="cursor-pointer relative cursor-default select-none py-2 pl-3 pr-9 text-gray-900 flex flex-row gap-1"
-                                role="option"
                                 onClick={() => handleLangChange(lang)}
                             >
                                 <div className="flex items-center">
-                                    <span className="h-5 w-5 flex-shrink-0 rounded-full">{lang.toUpperCase()}</span>
+                                    <span className="h-5 w-5 flex-shrink-0 rounded-full">
+                                        {lang.toUpperCase()}
+                                    </span>
                                     {selectedLang == lang.toUpperCase() && <FontAwesomeIcon icon={faCheck} className="h-5 w-5 text-blue-400" />}
                                 </div>
                             </li>
