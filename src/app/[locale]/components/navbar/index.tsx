@@ -9,7 +9,7 @@ export const Navbar = () => {
     const t = useTranslations();
 
     return (
-        <nav className="relative bg-white dark:bg-gray-900">
+        <nav className="sticky top-0 z-40 w-full backdrop-blur flex-none transition-colors duration-500 lg:z-50 lg:border-b lg:border-slate-900/10 dark:border-slate-50/[0.06] bg-white supports-backdrop-blur:bg-white/95 dark:bg-slate-900/75">
             <div className="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
                 <div className="flex items-center justify-between">
                     <Link href="#">

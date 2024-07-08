@@ -1,7 +1,7 @@
 'use client';
 
 import { locales } from "@/i18n";
-import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useLocale } from "next-intl";
 import { useRouter } from "next/navigation";
@@ -27,33 +27,34 @@ export const LangSwitcher = () => {
         <div className="relative">
             <button
                 type="button"
-                className="cursor-pointer relative w-full cursor-default rounded-md bg-white py-1.5 pl-3 pr-10 text-left text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 sm:text-sm sm:leading-6 flex flex-row gap-1"
+                className="relative z-10 flex items-center p-2 text-sm text-gray-600 bg-white border border-transparent rounded-md focus:border-blue-500 focus:ring-opacity-40 dark:focus:ring-opacity-40 focus:ring-blue-300 dark:focus:ring-blue-400 focus:ring dark:text-white dark:bg-gray-800 focus:outline-none flex flex-row gap-1"
                 aria-haspopup="listbox"
                 aria-expanded={isOpen}
                 aria-labelledby="listbox-label"
                 onClick={toggleDropdown}
             >
-                <span className="flex items-center">
-                    <span className="h-5 w-5 flex-shrink-0 rounded-full">{selectedLang}</span>
-                </span>
+                <span className="mx-1">{selectedLang}</span>
+                <FontAwesomeIcon icon={isOpen ? faChevronUp : faChevronDown} />
             </button>
             {isOpen && (
                 <ul className="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm" tabIndex={-1} role="listbox" aria-labelledby="listbox-label">
                     {
-                        locales.map((lang, i) => (
-                            <li
-                                key={i}
-                                className="cursor-pointer relative cursor-default select-none py-2 pl-3 pr-9 text-gray-900 flex flex-row gap-1"
-                                onClick={() => handleLangChange(lang)}
-                            >
-                                <div className="flex items-center">
-                                    <span className="h-5 w-5 flex-shrink-0 rounded-full">
-                                        {lang.toUpperCase()}
-                                    </span>
-                                    {selectedLang == lang.toUpperCase() && <FontAwesomeIcon icon={faCheck} className="h-5 w-5 text-blue-400" />}
-                                </div>
-                            </li>
-                        ))
+                        locales.map((lang, i) => {
+                            let upper = lang.toUpperCase();
+                            return (
+                                <li
+                                    key={i}
+                                    className={`hover:bg-blue-400 cursor-pointer relative cursor-default select-none py-2 pl-3 pr-9 text-gray-900 flex flex-row gap-1`}
+                                    onClick={() => handleLangChange(lang)}
+                                >
+                                    <div className="flex items-center">
+                                        <span className="h-5 w-5 flex-shrink-0 rounded-full">
+                                            {upper}
+                                        </span>
+                                    </div>
+                                </li>
+                            );
+                        })
                     }
                 </ul>
             )}
