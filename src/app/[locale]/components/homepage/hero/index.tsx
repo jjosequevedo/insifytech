@@ -14,12 +14,12 @@ export const Hero = () => {
             <div className="container px-6 py-16 mx-auto">
                 <div className="items-center lg:flex">
                     <div className="w-full lg:w-1/2">
-                        <div className="lg:max-w-lg">
-                            <h1 className="text-3xl font-semibold text-gray-800 dark:text-white lg:text-4xl">{t('Best place to choose your clothes')}</h1>
+                        <div className="lg:max-w-xl">
+                            <h1 className="text-3xl font-semibold text-gray-800 dark:text-white lg:text-6xl">{t('Simplified Website Development Solutions')}</h1>
 
-                            <p className="mt-3 text-gray-600 dark:text-gray-400">{t('The old rocking chair creaked on the porch as Eliza peered out at the approaching storm')}</p>
+                            <h3 className="mt-3 text-2xl text-gray-600 dark:text-gray-400">{t("Insify Tech combines insight with simplification to deliver professional website development services using PHP and NextJS. Our skilled developers create innovative and easy-to-manage websites that perfectly capture your brand's essence. Let us help you Insify your tech presence!")}</h3>
 
-                            <button className="w-full px-5 py-2 mt-6 text-sm tracking-wider text-white uppercase transition-colors duration-300 transform bg-blue-600 rounded-lg lg:w-auto hover:bg-blue-500 focus:outline-none focus:bg-blue-500">{t('Shop Now')}</button>
+                            <button className="w-full px-5 py-2 mt-6 text-md tracking-wider text-white font-semibold transition-colors duration-300 transform bg-emerald-600 rounded-lg lg:w-auto hover:bg-emerald-500 focus:outline-none focus:bg-emerald-500">{t("Let's talk")}</button>
                         </div>
                     </div>
 
