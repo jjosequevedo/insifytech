@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { LangSwitcher } from "../langswitcher";
+import { LangSwitcher } from "../../common/langswitcher";
 import { useTranslations } from "next-intl";
 
 export const Hero = () => {
@@ -24,7 +24,7 @@ export const Hero = () => {
                     </div>
 
                     <div className="flex items-center justify-center w-full mt-6 lg:mt-0 lg:w-1/2">
-                        <Image width={200} height={200} className="w-full h-full lg:max-w-3xl" src='https://merakiui.com/images/components/Catalogue-pana.svg' alt="Catalogue-pana.svg" />
+                        <Image width={200} height={200} className="w-full h-full lg:max-w-3xl" src='/images/hero.svg' alt="Catalogue-pana.svg" />
                     </div>
                 </div>
             </div>
