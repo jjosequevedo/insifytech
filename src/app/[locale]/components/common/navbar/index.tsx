@@ -5,9 +5,10 @@ import { LangSwitcher } from "../langswitcher";
 import { ToggleTheme } from "../toggletheme";
 import { useTranslations } from "next-intl";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faClose, faI, faT } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faClose } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import { MenuItem } from "@/app/interfaces";
+import { Logo } from "../logo";
 
 export const Navbar = () => {
 
@@ -38,13 +39,7 @@ export const Navbar = () => {
         <nav className="sticky top-0 z-40 w-full backdrop-blur flex-none transition-colors duration-500 lg:z-50 lg:border-b lg:border-slate-900/10 dark:border-slate-50/[0.06] bg-white supports-backdrop-blur:bg-white/95 dark:bg-slate-900/75">
             <div className="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
                 <div className="flex items-center justify-between">
-                    <Link href="#" className="flex gap-2 items-center">
-                        <div className="border flex items-center justify-center border-lime-600 rounded-full p-2 w-10 h-10">
-                            <FontAwesomeIcon className="transform-none position-absolute text-emerald-600" icon={faI} />
-                            <FontAwesomeIcon className="text-sky-600" icon={faT} />
-                        </div>
-                        <span className="w-auto h-6 sm:h-7 text-gray-700 text-lg">Insify<span className="font-semibold">Tech</span></span>
-                    </Link>
+                    <Logo />
 
                     {/* <!-- Mobile menu button --> */}
                     <div className="flex md:hidden">
