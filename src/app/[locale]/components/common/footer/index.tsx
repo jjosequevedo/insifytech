@@ -13,7 +13,7 @@ export const Footer = () => {
                         <h1 className="w-full md:w-2/3 text-gray-900">How can we help you. get in touch</h1>
                     </div>
                     <div className="flex mt-8 flex-col md:flex-row md:justify-between">
-                        <p className="w-full md:w-2/3 text-gray-400">To ensure that all Wikipedia content is verifiable, anyone may question an uncited claim. If your work has been tagged</p>
+                        <p className="w-full md:w-2/3 text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at aliquet tortor, nec eleifend ex. Nunc sapien mi, sodales placerat mauris eget, rutrum vestibulum tortor</p>
                         <div className="w-44 pt-6 md:pt-0">
                             <Link href='#' className="bg-blue-500 justify-center text-center rounded-lg shadow px-10 py-3 flex items-center">Contact US</Link>
                         </div>
