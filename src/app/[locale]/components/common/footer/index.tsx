@@ -1,4 +1,5 @@
 import { faDribbble, faFacebookF, faFacebookSquare, faGithub, faInstagram, faTwitter, faYoutube } from "@fortawesome/free-brands-svg-icons";
+import { faI, faT } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import Link from "next/link";
@@ -19,9 +20,13 @@ export const Footer = () => {
                     </div>
                     <div className="flex flex-col">
                         <div className="flex mt-24 mb-12 flex-row justify-between">
-                            <div className="">
-                                <Image width={200} height={200} className="w-auto h-6 sm:h-7" src='https://merakiui.com/images/full-logo.svg' alt="" />
-                            </div>
+                            <Link href="#" className="flex gap-2 items-center">
+                                <div className="border flex items-center justify-center border-lime-600 rounded-full p-2 w-10 h-10">
+                                    <FontAwesomeIcon className="transform-none position-absolute text-emerald-600" icon={faI} />
+                                    <FontAwesomeIcon className="text-sky-600" icon={faT} />
+                                </div>
+                                <span className="w-auto h-6 sm:h-7 text-gray-700 text-lg">Insify<span className="font-semibold">Tech</span></span>
+                            </Link>
                             <a className="hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase">About</a>
                             <a className="hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase">Services</a>
                             <a className="hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase">Why us</a>
